@@ -16,7 +16,8 @@
         "symfony/yaml": "5.2.*"
     },
     "require-dev": {
-        "symplify/config-transformer": "^9.2"
+        "symplify/config-transformer": "^9.2",
+        "symplify/easy-coding-standard": "^9.2"
     },
     "config": {
         "optimize-autoloader": true,
@@ -45,6 +46,8 @@
             "config-transformer switch-format config --input-format yaml --output-format php --target-symfony-version 5",
             "config-transformer switch-format config --input-format xml --output-format php --target-symfony-version 5"
         ],
+        "ecs": "ecs check",
+        "ecs-fix": "ecs check --fix",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
