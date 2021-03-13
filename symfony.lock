@@ -1,4 +1,10 @@
 {
+    "nette/neon": {
+        "version": "v3.2.2"
+    },
+    "nette/utils": {
+        "version": "v3.2.2"
+    },
     "php": {
         "version": "8.0"
     },
@@ -52,6 +58,9 @@
     },
     "symfony/event-dispatcher-contracts": {
         "version": "v2.2.0"
+    },
+    "symfony/expression-language": {
+        "version": "v5.2.4"
     },
     "symfony/filesystem": {
         "version": "v5.2.4"
@@ -143,5 +152,32 @@
     },
     "symfony/yaml": {
         "version": "v5.2.5"
+    },
+    "symplify/autowire-array-parameter": {
+        "version": "v9.2.6"
+    },
+    "symplify/composer-json-manipulator": {
+        "version": "v9.2.6"
+    },
+    "symplify/config-transformer": {
+        "version": "v9.2.6"
+    },
+    "symplify/console-package-builder": {
+        "version": "v9.2.6"
+    },
+    "symplify/easy-testing": {
+        "version": "v9.2.6"
+    },
+    "symplify/package-builder": {
+        "version": "v9.2.6"
+    },
+    "symplify/php-config-printer": {
+        "version": "v9.2.6"
+    },
+    "symplify/smart-file-system": {
+        "version": "v9.2.6"
+    },
+    "symplify/symplify-kernel": {
+        "version": "v9.2.6"
     }
 }
