@@ -55,6 +55,7 @@
         "ecs": "ecs check",
         "ecs-fix": "ecs check --fix",
         "tests": "codecept run",
+        "tests:coverage": "codecept run --coverage --coverage-html",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
