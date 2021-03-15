@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: db
+    image: postgres:12
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dbtest
+    ports:
+      - 15432:5432
+  php-fpm:
+    container_name: php-fpm
+    build:
+      context: ./.docker/php
+    depends_on:
+      - db
+    environment:
+      - APP_ENV=${APP_ENV}
+      - APP_SECRET=${APP_SECRET}
+      - DATABASE_URL=${DATABASE_URL}
+    volumes:
+      - .:/var/www
+  nginx:
+    container_name: nginx
+    build:
+      context: ./.docker/nginx
+    volumes:
+      - .:/var/www
+      - ./.docker/logs:/var/log
+    depends_on:
+      - php-fpm
+    ports:
+      - "8000:80"
+      - "443:443"
